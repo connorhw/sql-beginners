@@ -1,0 +1,55 @@
+mysql> use cs134429'[K
+Database changed
+mysql> use cs134429[8GSelect distinct E.Fname, E.Lname, S.Fname, S.Lname, Dname, Pname from EMPLOYEE as E, EMPLOYEE as S, DEPARTMENT 
+, PROJECT where E.Super_ssn = S.Ssn AND S.Dno = Dnumber AND S.Dno = Dnum;[A[8Gselect Fname, Lname, Dependent_name, Relationship from EMPLOYEE, DEPENDENT where Ssn = Essn AND Relationship =,[118G
+ 'Daughter';[K[At [7P[22GFname from EMPLOYEE, WORKS_ON where Dno = 5 AND Ssn = Essn AND Pno = 1 AND Hours > 5;[K[117G  
+[K[A[107G
++---------+-------+
+| Lname   | Fname |
++---------+-------+
+| Smith   | John  |
+| English | Joyce |
++---------+-------+
+2 rows in set (0.00 sec)
+
+mysql> select Lname, Fname from EMPLOYEE, WORKS_ON where Dno = 5 AND Ssn = Essn AND Pno = 1 AND Hours > 5;[8Guse cs134429[K[8GSelect distinct E.Fname, E.Lname, S.Fname, S.Lname, Dname, Pname from EMPLOYEE as E, EMPLOYEE as S, DEPARTMENT 
+, PROJECT where E.Super_ssn = S.Ssn AND S.Dno = Dnumber AND S.Dno = Dnum;[A[8Gselect Fname, Lname, Dependent_name, Relationship from EMPLOYEE, DEPENDENT where Ssn = Essn AND Relationship =,[118G
+ 'Daughter';[K
++----------+-------+----------------+--------------+
+| Fname    | Lname | Dependent_name | Relationship |
++----------+-------+----------------+--------------+
+| John     | Smith | Alice          | Daughter     |
+| Franklin | Wong  | Alice          | Daughter     |
++----------+-------+----------------+--------------+
+2 rows in set (0.00 sec)
+
+mysql> select Fname, Lname, Dependent_name, Relationship from EMPLOYEE, DEPENDENT where Ssn = Essn AND Relationship = 
+ 'Daughter';[At [7P[22GFname from EMPLOYEE, WORKS_ON where Dno = 5 AND Ssn = Essn AND Pno = 1 AND Hours > 5;[K[117G  
+[K[A[107G[8Guse cs134429[K[8GSelect distinct E.Fname, E.Lname, S.Fname, S.Lname, Dname, Pname from EMPLOYEE as E, EMPLOYEE as S, DEPARTMENT 
+, PROJECT where E.Super_ssn = S.Ssn AND S.Dno = Dnumber AND S.Dno = Dnum;
++----------+---------+----------+---------+----------------+-----------------+
+| Fname    | Lname   | Fname    | Lname   | Dname          | Pname           |
++----------+---------+----------+---------+----------------+-----------------+
+| Ahmad    | Jabbar  | Jennifer | Wallace | Administration | Computerization |
+| Alicia   | Zelaya  | Jennifer | Wallace | Administration | Computerization |
+| Ahmad    | Jabbar  | Jennifer | Wallace | Administration | Newbenefits     |
+| Alicia   | Zelaya  | Jennifer | Wallace | Administration | Newbenefits     |
+| Franklin | Wong    | James    | Borg    | Headquarters   | Reorganization  |
+| Jennifer | Wallace | James    | Borg    | Headquarters   | Reorganization  |
+| John     | Smith   | Franklin | Wong    | Research       | ProductX        |
+| Joyce    | English | Franklin | Wong    | Research       | ProductX        |
+| Ramesh   | Narayan | Franklin | Wong    | Research       | ProductX        |
+| John     | Smith   | Franklin | Wong    | Research       | ProductY        |
+| Joyce    | English | Franklin | Wong    | Research       | ProductY        |
+| Ramesh   | Narayan | Franklin | Wong    | Research       | ProductY        |
+| John     | Smith   | Franklin | Wong    | Research       | ProductZ        |
+| Joyce    | English | Franklin | Wong    | Research       | ProductZ        |
+| Ramesh   | Narayan | Franklin | Wong    | Research       | ProductZ        |
++----------+---------+----------+---------+----------------+-----------------+
+15 rows in set (0.01 sec)
+
+mysql> exit
+Bye
+[cs134429@athena:21]> exit
+
+exit
